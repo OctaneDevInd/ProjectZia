@@ -10,6 +10,11 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource colorBlue}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource colorWhite}"></Setter>
             </Style>
+
+            <Style x:Key="keyboardButtonsStyle" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource colorWhite}"/>
+            </Style>
+            
         </ResourceDictionary>
         
     </Application.Resources>

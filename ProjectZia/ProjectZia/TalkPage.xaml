@@ -11,21 +11,21 @@
               Padding="0,5"
               >
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
 
@@ -34,56 +34,56 @@
                         WidthRequest="100"
                         AutoSize="TextChanges"></Editor>
                 <Grid>
-                    <Button Text="Speak" Grid.Column="0"></Button>
-                    <Button Text="Clear" Grid.Column="1"></Button>
+                    <Button Style="{StaticResource mainButtonsStyle}" Text="Speak" Grid.Column="0"></Button>
+                    <Button Style="{StaticResource mainButtonsStyle}" Text="Clear" Grid.Column="1"></Button>
                 </Grid>
 
             </StackLayout>
 
 
             <!-- Row 1-->
-            <ImageButton Source="A.png" Grid.Row="1" Grid.Column="0"/>
-            <ImageButton Source="B.png" Grid.Row="1" Grid.Column="1"/>
-            <ImageButton Source="C.png" Grid.Row="1" Grid.Column="2"/>
-            <ImageButton Source="D.png" Grid.Row="1" Grid.Column="3"/>
-            <ImageButton Source="E.png" Grid.Row="1" Grid.Column="4"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="A.png" Grid.Row="1" Grid.Column="0"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="B.png" Grid.Row="1" Grid.Column="1"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="C.png" Grid.Row="1" Grid.Column="2"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="D.png" Grid.Row="1" Grid.Column="3"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="E.png" Grid.Row="1" Grid.Column="4"/>
 
 
                 
              <!-- Row 2-->
-            <ImageButton Source="F.png" Grid.Row="2" Grid.Column="0"/>
-            <ImageButton Source="G.png" Grid.Row="2" Grid.Column="1"/>
-            <ImageButton Source="H.png" Grid.Row="2" Grid.Column="2"/>
-            <ImageButton Source="I.png" Grid.Row="2" Grid.Column="3"/>
-            <ImageButton Source="J.png" Grid.Row="2" Grid.Column="4"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="F.png" Grid.Row="2" Grid.Column="0"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="G.png" Grid.Row="2" Grid.Column="1"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="H.png" Grid.Row="2" Grid.Column="2"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="I.png" Grid.Row="2" Grid.Column="3"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="J.png" Grid.Row="2" Grid.Column="4"/>
 
 
             <!-- Row 3-->
-            <ImageButton Source="K.png" Grid.Row="3" Grid.Column="0"/>
-            <ImageButton Source="L.png" Grid.Row="3" Grid.Column="1"/>
-            <ImageButton Source="M.png" Grid.Row="3" Grid.Column="2"/>
-            <ImageButton Source="N.png" Grid.Row="3" Grid.Column="3"/>
-            <ImageButton Source="O.png" Grid.Row="3" Grid.Column="4"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="K.png" Grid.Row="3" Grid.Column="0"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="L.png" Grid.Row="3" Grid.Column="1"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="M.png" Grid.Row="3" Grid.Column="2"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="N.png" Grid.Row="3" Grid.Column="3"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="O.png" Grid.Row="3" Grid.Column="4"/>
 
                 
             <!-- Row 4-->                
-            <ImageButton Source="P.png" Grid.Row="4" Grid.Column="0"/>
-            <ImageButton Source="Q.png" Grid.Row="4" Grid.Column="1"/>
-            <ImageButton Source="R.png" Grid.Row="4" Grid.Column="2"/>
-            <ImageButton Source="S.png" Grid.Row="4" Grid.Column="3"/>
-            <ImageButton Source="T.png" Grid.Row="4" Grid.Column="4"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="P.png" Grid.Row="4" Grid.Column="0"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="Q.png" Grid.Row="4" Grid.Column="1"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="R.png" Grid.Row="4" Grid.Column="2"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="S.png" Grid.Row="4" Grid.Column="3"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="T.png" Grid.Row="4" Grid.Column="4"/>
 
                 
                 
             <!-- Row 5-->
-            <ImageButton Source="U.png" Grid.Row="5" Grid.Column="0"/>
-            <ImageButton Source="V.png" Grid.Row="5" Grid.Column="1"/>
-            <ImageButton Source="W.png" Grid.Row="5" Grid.Column="2"/>
-            <ImageButton Source="X.png" Grid.Row="5" Grid.Column="3"/>
-            <ImageButton Source="Y.png" Grid.Row="5" Grid.Column="4"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="U.png" Grid.Row="5" Grid.Column="0"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="V.png" Grid.Row="5" Grid.Column="1"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="W.png" Grid.Row="5" Grid.Column="2"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="X.png" Grid.Row="5" Grid.Column="3"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="Y.png" Grid.Row="5" Grid.Column="4"/>
 
             <!-- Row 6-->
-            <ImageButton Source="Z.png" Grid.Row="6" Grid.Column="0"/>
+            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="Z.png" Grid.Row="6" Grid.Column="0"/>
 
         </Grid>
         </ScrollView>
