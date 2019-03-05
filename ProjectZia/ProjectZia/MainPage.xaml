@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProjectZia"
+             x:Class="ProjectZia.MainPage"
+             Appearing="ContentPage_Appearing">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Button x:Name="listenButton" Margin="50,100,50,0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Style="{StaticResource mainButtonsStyle}" Text="Listen" Clicked="ListenButton_Clicked"></Button>
+        <Button x:Name="talkButton"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Style="{StaticResource mainButtonsStyle}"  Text="Talk" Clicked="TalkButton_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

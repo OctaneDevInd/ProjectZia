@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectZia.ListenPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="startListeningButton"
+                    Text="Start Listening"
+                    Style="{StaticResource mainButtonsStyle}"
+                    Clicked="StartListeningButton_Clicked"></Button>
+            <Label Text="We do the Listening here..."
+                FontSize="Large"
+                   TextColor="{StaticResource colorBlue}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
