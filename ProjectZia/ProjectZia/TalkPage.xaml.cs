@@ -353,5 +353,20 @@ namespace ProjectZia
             else
                 speakEditor.Text += text.ToLower();
         }
+
+        private void ButtonBackspace_Clicked(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(speakEditor.Text))
+            {
+                DisplayAlert("Oops!","Enter some text first.","OK");
+            }
+            var text = speakEditor.Text;
+            var newtext = new StringBuilder();
+            for(int i=0;i<text.Length-1;i++)
+            {
+                newtext.Append(text[i]);
+            }
+            speakEditor.Text = newtext.ToString();
+        }
     }
 }

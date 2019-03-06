@@ -30,10 +30,12 @@
 
 
             <StackLayout Grid.Row="0" Grid.ColumnSpan="5">
-                <Editor x:Name="speakEditor"
+                    <ScrollView>
+                        <Editor x:Name="speakEditor"
                         WidthRequest="100"
-                        ></Editor>
-                <Grid>
+                        />
+                    </ScrollView>
+                    <Grid>
                     <Button x:Name="speakButton" Style="{StaticResource mainButtonsStyle}" Text="Speak" Grid.Column="0" Clicked="SpeakButton_Clicked"></Button>
                     <Button x:Name="clearButton" Style="{StaticResource mainButtonsStyle}" Text="Clear" Grid.Column="1" Clicked="ClearButton_Clicked"></Button>
                 </Grid>
@@ -66,11 +68,17 @@
                          Grid.Row="1" 
                          Grid.Column="3"
                          Clicked="ButtonD_Clicked"/>
+            <ImageButton x:Name="buttonBackspace"
+                         Source="backspace.png"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Grid.Row="1"
+                         Grid.Column="4"
+                         Clicked="ButtonBackspace_Clicked"/>
             <ImageButton x:Name="buttonE"
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="E.png" 
-                         Grid.Row="1" 
-                         Grid.Column="4"
+                         Grid.Row="2" 
+                         Grid.Column="0"
                          Clicked="ButtonE_Clicked"/>
 
 
@@ -80,31 +88,31 @@
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="F.png" 
                          Grid.Row="2" 
-                         Grid.Column="0"
+                         Grid.Column="1"
                          Clicked="ButtonF_Clicked"/>
             <ImageButton x:Name="buttonG" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="G.png" 
                          Grid.Row="2" 
-                         Grid.Column="1"
+                         Grid.Column="2"
                          Clicked="ButtonG_Clicked"/>
             <ImageButton x:Name="buttonH" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="H.png" 
                          Grid.Row="2" 
-                         Grid.Column="2"
+                         Grid.Column="3"
                          Clicked="ButtonH_Clicked"/>
             <ImageButton x:Name="buttonI" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="I.png" 
                          Grid.Row="2" 
-                         Grid.Column="3"
+                         Grid.Column="4"
                          Clicked="ButtonI_Clicked"/>
             <ImageButton x:Name="buttonJ" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="J.png" 
-                         Grid.Row="2" 
-                         Grid.Column="4"
+                         Grid.Row="3" 
+                         Grid.Column="0"
                          Clicked="ButtonJ_Clicked"/>
 
 
@@ -113,31 +121,31 @@
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="K.png" 
                          Grid.Row="3" 
-                         Grid.Column="0"
+                         Grid.Column="1"
                          Clicked="ButtonK_Clicked"/>
             <ImageButton x:Name="buttonL"
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="L.png"
                          Grid.Row="3" 
-                         Grid.Column="1"
+                         Grid.Column="2"
                          Clicked="ButtonL_Clicked"/>
             <ImageButton x:Name="buttonM"
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="M.png"
                          Grid.Row="3"
-                         Grid.Column="2"
+                         Grid.Column="3"
                          Clicked="ButtonM_Clicked"/>
             <ImageButton x:Name="buttonN"
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="N.png"
                          Grid.Row="3"
-                         Grid.Column="3"
+                         Grid.Column="4"
                          Clicked="ButtonN_Clicked"/>
             <ImageButton x:Name="buttonO"
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="O.png"
-                         Grid.Row="3"
-                         Grid.Column="4"
+                         Grid.Row="4"
+                         Grid.Column="0"
                          Clicked="ButtonO_Clicked"
                          />
 
@@ -147,31 +155,31 @@
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="P.png" 
                          Grid.Row="4" 
-                         Grid.Column="0"
+                         Grid.Column="1"
                          Clicked="ButtonP_Clicked"/>
             <ImageButton x:Name="buttonQ" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="Q.png" 
                          Grid.Row="4" 
-                         Grid.Column="1"
+                         Grid.Column="2"
                          Clicked="ButtonQ_Clicked"/>
             <ImageButton x:Name="buttonR" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="R.png" 
                          Grid.Row="4" 
-                         Grid.Column="2"
+                         Grid.Column="3"
                          Clicked="ButtonR_Clicked"/>
             <ImageButton x:Name="buttonS"
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="S.png" 
                          Grid.Row="4" 
-                         Grid.Column="3"
+                         Grid.Column="4"
                          Clicked="ButtonS_Clicked"/>
             <ImageButton x:Name="buttonT" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="T.png" 
-                         Grid.Row="4" 
-                         Grid.Column="4"
+                         Grid.Row="5" 
+                         Grid.Column="0"
                          Clicked="ButtonT_Clicked"/>
 
                 
@@ -181,31 +189,31 @@
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="U.png"
                          Grid.Row="5"
-                         Grid.Column="0"
+                         Grid.Column="1"
                          Clicked="ButtonU_Clicked"/>
             <ImageButton x:Name="buttonV" 
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="V.png" 
                          Grid.Row="5" 
-                         Grid.Column="1"
+                         Grid.Column="2"
                          Clicked="ButtonV_Clicked"/>
             <ImageButton x:Name="buttonW" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="W.png" 
                          Grid.Row="5" 
-                         Grid.Column="2"
+                         Grid.Column="3"
                          Clicked="ButtonW_Clicked"/>
             <ImageButton x:Name="buttonX"
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="X.png" 
                          Grid.Row="5" 
-                         Grid.Column="3"
+                         Grid.Column="4"
                          Clicked="ButtonX_Clicked"/>
             <ImageButton x:Name="buttonY" 
                          Style="{StaticResource keyboardButtonsStyle}" 
                          Source="Y.png" 
-                         Grid.Row="5" 
-                         Grid.Column="4"
+                         Grid.Row="6" 
+                         Grid.Column="0"
                          Clicked="ButtonY_Clicked"/>
 
             <!-- Row 6-->
@@ -213,7 +221,7 @@
                          Style="{StaticResource keyboardButtonsStyle}"
                          Source="Z.png" 
                          Grid.Row="6" 
-                         Grid.Column="0"
+                         Grid.Column="1"
                          Clicked="ButtonZ_Clicked"/>
 
         </Grid>
