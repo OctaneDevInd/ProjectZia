@@ -32,58 +32,189 @@
             <StackLayout Grid.Row="0" Grid.ColumnSpan="5">
                 <Editor x:Name="speakEditor"
                         WidthRequest="100"
-                        AutoSize="TextChanges"></Editor>
+                        ></Editor>
                 <Grid>
-                    <Button Style="{StaticResource mainButtonsStyle}" Text="Speak" Grid.Column="0"></Button>
-                    <Button Style="{StaticResource mainButtonsStyle}" Text="Clear" Grid.Column="1"></Button>
+                    <Button x:Name="speakButton" Style="{StaticResource mainButtonsStyle}" Text="Speak" Grid.Column="0" Clicked="SpeakButton_Clicked"></Button>
+                    <Button x:Name="clearButton" Style="{StaticResource mainButtonsStyle}" Text="Clear" Grid.Column="1" Clicked="ClearButton_Clicked"></Button>
                 </Grid>
 
             </StackLayout>
 
 
             <!-- Row 1-->
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="A.png" Grid.Row="1" Grid.Column="0"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="B.png" Grid.Row="1" Grid.Column="1"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="C.png" Grid.Row="1" Grid.Column="2"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="D.png" Grid.Row="1" Grid.Column="3"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="E.png" Grid.Row="1" Grid.Column="4"/>
+            <ImageButton x:Name="buttonA"
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="A.png" 
+                         Grid.Row="1" 
+                         Grid.Column="0"
+                         Clicked="ButtonA_Clicked"/>
+            <ImageButton x:Name ="buttonB"
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="B.png" 
+                         Grid.Row="1" 
+                         Grid.Column="1"
+                         Clicked="ButtonB_Clicked"/>
+            <ImageButton x:Name="buttonC"
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="C.png"
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         Clicked="ButtonC_Clicked"/>
+            <ImageButton x:Name="buttonD" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="D.png" 
+                         Grid.Row="1" 
+                         Grid.Column="3"
+                         Clicked="ButtonD_Clicked"/>
+            <ImageButton x:Name="buttonE"
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="E.png" 
+                         Grid.Row="1" 
+                         Grid.Column="4"
+                         Clicked="ButtonE_Clicked"/>
 
 
                 
              <!-- Row 2-->
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="F.png" Grid.Row="2" Grid.Column="0"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="G.png" Grid.Row="2" Grid.Column="1"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="H.png" Grid.Row="2" Grid.Column="2"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="I.png" Grid.Row="2" Grid.Column="3"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="J.png" Grid.Row="2" Grid.Column="4"/>
+            <ImageButton x:Name="buttonF"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="F.png" 
+                         Grid.Row="2" 
+                         Grid.Column="0"
+                         Clicked="ButtonF_Clicked"/>
+            <ImageButton x:Name="buttonG" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="G.png" 
+                         Grid.Row="2" 
+                         Grid.Column="1"
+                         Clicked="ButtonG_Clicked"/>
+            <ImageButton x:Name="buttonH" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="H.png" 
+                         Grid.Row="2" 
+                         Grid.Column="2"
+                         Clicked="ButtonH_Clicked"/>
+            <ImageButton x:Name="buttonI" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="I.png" 
+                         Grid.Row="2" 
+                         Grid.Column="3"
+                         Clicked="ButtonI_Clicked"/>
+            <ImageButton x:Name="buttonJ" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="J.png" 
+                         Grid.Row="2" 
+                         Grid.Column="4"
+                         Clicked="ButtonJ_Clicked"/>
 
 
             <!-- Row 3-->
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="K.png" Grid.Row="3" Grid.Column="0"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="L.png" Grid.Row="3" Grid.Column="1"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="M.png" Grid.Row="3" Grid.Column="2"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="N.png" Grid.Row="3" Grid.Column="3"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="O.png" Grid.Row="3" Grid.Column="4"/>
+            <ImageButton x:Name="buttonK" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="K.png" 
+                         Grid.Row="3" 
+                         Grid.Column="0"
+                         Clicked="ButtonK_Clicked"/>
+            <ImageButton x:Name="buttonL"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="L.png"
+                         Grid.Row="3" 
+                         Grid.Column="1"
+                         Clicked="ButtonL_Clicked"/>
+            <ImageButton x:Name="buttonM"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="M.png"
+                         Grid.Row="3"
+                         Grid.Column="2"
+                         Clicked="ButtonM_Clicked"/>
+            <ImageButton x:Name="buttonN"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="N.png"
+                         Grid.Row="3"
+                         Grid.Column="3"
+                         Clicked="ButtonN_Clicked"/>
+            <ImageButton x:Name="buttonO"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="O.png"
+                         Grid.Row="3"
+                         Grid.Column="4"
+                         Clicked="ButtonO_Clicked"
+                         />
 
                 
             <!-- Row 4-->                
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="P.png" Grid.Row="4" Grid.Column="0"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="Q.png" Grid.Row="4" Grid.Column="1"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="R.png" Grid.Row="4" Grid.Column="2"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="S.png" Grid.Row="4" Grid.Column="3"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="T.png" Grid.Row="4" Grid.Column="4"/>
+            <ImageButton x:Name="buttonP" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="P.png" 
+                         Grid.Row="4" 
+                         Grid.Column="0"
+                         Clicked="ButtonP_Clicked"/>
+            <ImageButton x:Name="buttonQ" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="Q.png" 
+                         Grid.Row="4" 
+                         Grid.Column="1"
+                         Clicked="ButtonQ_Clicked"/>
+            <ImageButton x:Name="buttonR" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="R.png" 
+                         Grid.Row="4" 
+                         Grid.Column="2"
+                         Clicked="ButtonR_Clicked"/>
+            <ImageButton x:Name="buttonS"
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="S.png" 
+                         Grid.Row="4" 
+                         Grid.Column="3"
+                         Clicked="ButtonS_Clicked"/>
+            <ImageButton x:Name="buttonT" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="T.png" 
+                         Grid.Row="4" 
+                         Grid.Column="4"
+                         Clicked="ButtonT_Clicked"/>
 
                 
                 
             <!-- Row 5-->
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="U.png" Grid.Row="5" Grid.Column="0"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="V.png" Grid.Row="5" Grid.Column="1"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="W.png" Grid.Row="5" Grid.Column="2"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="X.png" Grid.Row="5" Grid.Column="3"/>
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="Y.png" Grid.Row="5" Grid.Column="4"/>
+            <ImageButton x:Name="buttonU"
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="U.png"
+                         Grid.Row="5"
+                         Grid.Column="0"
+                         Clicked="ButtonU_Clicked"/>
+            <ImageButton x:Name="buttonV" 
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="V.png" 
+                         Grid.Row="5" 
+                         Grid.Column="1"
+                         Clicked="ButtonV_Clicked"/>
+            <ImageButton x:Name="buttonW" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="W.png" 
+                         Grid.Row="5" 
+                         Grid.Column="2"
+                         Clicked="ButtonW_Clicked"/>
+            <ImageButton x:Name="buttonX"
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="X.png" 
+                         Grid.Row="5" 
+                         Grid.Column="3"
+                         Clicked="ButtonX_Clicked"/>
+            <ImageButton x:Name="buttonY" 
+                         Style="{StaticResource keyboardButtonsStyle}" 
+                         Source="Y.png" 
+                         Grid.Row="5" 
+                         Grid.Column="4"
+                         Clicked="ButtonY_Clicked"/>
 
             <!-- Row 6-->
-            <ImageButton Style="{StaticResource keyboardButtonsStyle}" Source="Z.png" Grid.Row="6" Grid.Column="0"/>
+            <ImageButton x:Name="buttonZ" 
+                         Style="{StaticResource keyboardButtonsStyle}"
+                         Source="Z.png" 
+                         Grid.Row="6" 
+                         Grid.Column="0"
+                         Clicked="ButtonZ_Clicked"/>
 
         </Grid>
         </ScrollView>

@@ -9,12 +9,13 @@
             <Style x:Key="mainButtonsStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource colorBlue}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource colorWhite}"></Setter>
+                <Setter Property="FontSize" Value="Large"/>
             </Style>
 
             <Style x:Key="keyboardButtonsStyle" TargetType="ImageButton">
                 <Setter Property="BackgroundColor" Value="{StaticResource colorWhite}"/>
                 <Setter Property="BorderWidth" Value="2"/>
-                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="CornerRadius" Value="250"/>
             </Style>
             
         </ResourceDictionary>
