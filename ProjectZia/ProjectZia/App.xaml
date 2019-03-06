@@ -13,6 +13,8 @@
 
             <Style x:Key="keyboardButtonsStyle" TargetType="ImageButton">
                 <Setter Property="BackgroundColor" Value="{StaticResource colorWhite}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="CornerRadius" Value="100"/>
             </Style>
             
         </ResourceDictionary>
