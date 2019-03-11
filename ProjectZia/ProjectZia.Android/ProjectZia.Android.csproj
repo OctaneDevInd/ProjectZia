@@ -68,6 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidNativeLibrary Include="lib\arm64-v8a\android-pocketsphinx.so" />
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\android-pocketsphinx.so" />
+    <AndroidNativeLibrary Include="lib\x86\android-pocketsphinx.so" />
+    <AndroidNativeLibrary Include="lib\x86_64\android-pocketsphinx.so" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
