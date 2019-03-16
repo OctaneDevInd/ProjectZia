@@ -7,7 +7,12 @@
             <Button x:Name="startListeningButton"
                     Text="Start Listening"
                     Style="{StaticResource mainButtonsStyle}"
-                    Clicked="StartListeningButton_Clicked"></Button>
+                    Clicked="StartListeningButton_Clicked"/>
+            <Button x:Name="playRecordingButton"
+                    Text="Play Recording"
+                    Style="{StaticResource mainButtonsStyle}"
+                    Clicked="PlayRecordingButton_Clicked"
+                    />
             <Label Text="We do the Listening here..."
                 FontSize="Large"
                    TextColor="{StaticResource colorBlue}"
