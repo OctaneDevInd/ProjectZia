@@ -16,6 +16,13 @@ using Android.Support.V7.AppCompat;
 using Xamarin.Forms;
 using Android.Support.V4.App;
 using Android.Support.V4.Content;
+using Android.Speech.Tts;
+using Android.Content;
+using Android.Speech;
+
+using System.Threading;
+using ProjectZia;
+
 
 namespace ProjectZia.Droid
 {
@@ -23,6 +30,7 @@ namespace ProjectZia.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         //private string[] PermissionsArray;
+        private const int VOICE = 10;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -44,6 +52,26 @@ namespace ProjectZia.Droid
                 ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.MediaContentControl, Manifest.Permission.CaptureAudioOutput }, 1);
             }
         }
-       
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            if (requestCode == VOICE)
+            {
+                if (resultCode == Result.Ok)
+                {
+                    var matches = data.GetStringArrayListExtra(RecognizerIntent.ExtraResults);
+                    if (matches.Count != 0)
+                    {
+                        var textInput = matches[0];
+                        if (textInput.Length > 500)
+                            textInput = textInput.Substring(0, 500);
+                        //SpeechToText_Android.SpeechText = textInput;
+                        
+                    }
+                }
+                //SpeechToText_Android.autoEvent.Set();
+            }
+        }
+
     }
 }

@@ -56,6 +56,10 @@ namespace ProjectZia
             playRecordingButton.IsEnabled = true;
             startListeningButton.IsEnabled = true;
         }
+        async Task<string> WaitForSpeechToText()
+        {
+            return await DependencyService.Get<ISpeechToText>().SpeechToTextAsync();
+        }
 
         //static byte[] convertToBytes(float[] data, int channels)
         //{
@@ -80,7 +84,10 @@ namespace ProjectZia
         private async void StartListeningButton_Clicked(object sender, EventArgs e)
         {
 
-            await RecordAudio();
+            //await RecordAudio();
+            var speech=await WaitForSpeechToText();
+            listenlabel.Text = speech;
+            
 
         }
         private async Task RecordAudio()
