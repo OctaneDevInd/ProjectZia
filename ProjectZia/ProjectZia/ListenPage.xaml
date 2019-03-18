@@ -13,7 +13,8 @@
                     Style="{StaticResource mainButtonsStyle}"
                     Clicked="PlayRecordingButton_Clicked"
                     />
-            <Label Text="We do the Listening here..."
+            <Label x:Name ="listenlabel" 
+                   Text="We do the Listening here..."
                 FontSize="Large"
                    TextColor="{StaticResource colorBlue}"
                 VerticalOptions="CenterAndExpand" 

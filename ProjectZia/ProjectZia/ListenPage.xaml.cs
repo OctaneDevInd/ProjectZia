@@ -20,6 +20,7 @@ namespace ProjectZia
         //Config c;
         AudioRecorderService recorder;
         AudioPlayer player;
+        string audioFile;
         public ListenPage ()
 		{
 			InitializeComponent ();
@@ -40,10 +41,12 @@ namespace ProjectZia
             //}
             recorder = new AudioRecorderService
             {
-                StopRecordingAfterTimeout = true,
-                AudioSilenceTimeout = TimeSpan.FromSeconds(2),
-                TotalAudioTimeout = TimeSpan.FromSeconds(20)
+                StopRecordingAfterTimeout = false,
+                //AudioSilenceTimeout = TimeSpan.FromSeconds(2),
+                //TotalAudioTimeout = TimeSpan.FromSeconds(20)
             };
+            
+            //recorder.FilePath = "/audio";
             player = new AudioPlayer();
             player.FinishedPlaying += Player_FinishedPlaying;
         }
@@ -91,14 +94,17 @@ namespace ProjectZia
                     var audiorecordTask = await recorder.StartRecording();
                     startListeningButton.Text = "Stop Listening";
 
-                    await audiorecordTask;
+                    audioFile = await audiorecordTask;
                     startListeningButton.Text = "Start Listening";
                     playRecordingButton.IsEnabled = true;
+                    listenlabel.Text = audioFile;
+                    //player.Play(audioFile);
                 }
                 else
                 {
                     startListeningButton.IsEnabled = false;
                     await recorder.StopRecording();
+                    player.Play(audioFile);
                     startListeningButton.IsEnabled = true;
                 }
             }
@@ -110,27 +116,38 @@ namespace ProjectZia
 
         private void PlayRecordingButton_Clicked(object sender, EventArgs e)
         {
-             PlayAudio();
+             PlayAudioAsync();
         }
 
-        private void PlayAudio()
+        private void PlayAudioAsync()
         {
             try
             {
-                var filePath = recorder.GetAudioFilePath();
+                var filePath = audioFile;
 
                 if (filePath != null)
                 {
+                    listenlabel.Text = filePath;
                     playRecordingButton.IsEnabled = false;
                     startListeningButton.IsEnabled = false;
-
-                    player.Play(filePath);
+                    try
+                    {
+                        player.Play(filePath);
+                    }catch(Exception exx)
+                    {
+                        DisplayAlert("Oops", exx.Message, "OK");
+                    }
+                    finally
+                    {
+                        playRecordingButton.IsEnabled = true;
+                        startListeningButton.IsEnabled = true;
+                    }
                 }
             }
             catch (Exception ex)
             {
                 //blow up the app!
-                throw ex;
+                DisplayAlert("Oops", ex.Message, "Ok");
             }
         }
     }
