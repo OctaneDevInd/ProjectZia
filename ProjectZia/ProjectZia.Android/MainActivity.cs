@@ -65,11 +65,11 @@ namespace ProjectZia.Droid
                         var textInput = matches[0];
                         if (textInput.Length > 500)
                             textInput = textInput.Substring(0, 500);
-                        //SpeechToText_Android.SpeechText = textInput;
+                        SpeechToText_Android.SpeechText = textInput;
                         
                     }
                 }
-                //SpeechToText_Android.autoEvent.Set();
+                SpeechToText_Android.autoEvent.Set();
             }
         }
 

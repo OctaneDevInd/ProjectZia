@@ -85,10 +85,17 @@ namespace ProjectZia
         {
 
             //await RecordAudio();
-            var speech=await WaitForSpeechToText();
-            listenlabel.Text = speech;
-            
-
+            string speech=string.Empty;
+            try
+            {
+                //speech = await WaitForSpeechToText();
+                await RecordAudio();
+            }catch(Exception ex)
+            {
+                await DisplayAlert("Oops", ex.Message, "OK");
+            }
+            //listenlabel.Text = speech;
+           
         }
         private async Task RecordAudio()
         {

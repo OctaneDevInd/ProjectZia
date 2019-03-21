@@ -18,14 +18,18 @@ using System.Threading;
 using Xamarin.Forms;
 
 using ProjectZia;
+using ProjectZia.Droid;
 
+
+[assembly: Xamarin.Forms.Dependency(typeof(SpeechToText_Android))]
 namespace ProjectZia
 {
-        public class SpeechToText_Android : ISpeechToText
-        {
+    public class SpeechToText_Android : ISpeechToText
+    {
         public static AutoResetEvent autoEvent = new AutoResetEvent(false);
         public static string SpeechText;
         const int VOICE = 10;
+        Context context = Android.App.Application.Context;
 
         public async Task<string> SpeechToTextAsync()
         {
@@ -40,9 +44,10 @@ namespace ProjectZia
 
             SpeechText = "";
             autoEvent.Reset();
-            ((Activity)Forms.Context).StartActivityForResult(voiceIntent, VOICE);
+            ((Activity)context).StartActivityForResult(voiceIntent, VOICE);
+            //((Activity).StartActivityForResult(voiceIntent, VOICE);
             await Task.Run(() => { autoEvent.WaitOne(new TimeSpan(0, 2, 0)); });
             return SpeechText;
         }
     }
-    }
+}
