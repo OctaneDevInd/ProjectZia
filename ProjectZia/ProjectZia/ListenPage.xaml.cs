@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
+//using XamarinAudioPlayer;
 
+using Plugin.SimpleAudioPlayer;
 using Plugin.AudioRecorder;
 using Pocketsphinx;
 
@@ -20,6 +23,7 @@ namespace ProjectZia
         //Config c;
         AudioRecorderService recorder;
         AudioPlayer player;
+        ISimpleAudioPlayer aplayer;
         string audioFile;
         public ListenPage ()
 		{
@@ -49,6 +53,7 @@ namespace ProjectZia
             //recorder.FilePath = "/audio";
             player = new AudioPlayer();
             player.FinishedPlaying += Player_FinishedPlaying;
+            aplayer = CrossSimpleAudioPlayer.Current;
         }
 
         private void Player_FinishedPlaying(object sender, EventArgs e)
@@ -113,6 +118,8 @@ namespace ProjectZia
                     playRecordingButton.IsEnabled = true;
                     listenlabel.Text = audioFile;
                     //player.Play(audioFile);
+                    aplayer.Load(audioFile);
+                    aplayer.Play();
                 }
                 else
                 {
